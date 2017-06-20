@@ -1,0 +1,45 @@
+on va faire un generateur d'image
+le script bash s'appellera galerie.sh 
+
+pour la v1, on placera le script dans un dossier qui contient des images, 
+il generera des miniatures (dans un sous-dossier mini cree par le script)
+ainsi qu'un fichier html qui presentera toutes les images du dossier, en miniature, 
+avec un lien qui permet d'afficher l'image en taille originale 
+notre script prendra 1 parametre qui sera le nom du fichier html a generer
+si on n'en met pas, il l'appellera galerie.html
+
+
+pour la V2, idem mais on fera une lightbox pour afficher les images
+et on améliorera la mise en page
+et on listera dynamiquement les images (yaura pas besoin d'avoir une nomenclature définie) 
+
+pour la V3, idem mais le script acceptera un autre parametre, qui sera le chemin absolu du repertoire
+dans lequel il y a les images et dans lequel generer le fichier html 
+si ce repertoire n'est pas renseigné, 
+
+
+pour la V4, on aura un parametre en plus pour definir la taille en px des miniatures a generer (taille de H)
+et ća affichera le nom de l'image sous chaque image
+ainsi que ses dimensions originales 
+et la date de last modif de l'image
+
+Le code html de la page générée est le suivant: 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+  <head>
+    <title>Ma galerie</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+      a img { border:0; }
+    </style>
+  </head>
+  <body>
+    <p>
+      <a href="alsamixer.png"><img src="miniatures/alsamixer.png" alt="" /></a> 
+      <a href="icone_installer.png">  <img src="miniatures/icone_installer.png" alt="" /></a> 
+      <a href="installation.png"><img src="miniatures/installation.png" alt="" /></a>
+    </p>
+  </body>
+</html>
